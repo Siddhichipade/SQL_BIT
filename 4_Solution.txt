@@ -1,0 +1,6 @@
+Given a table COUNTRY, query for all the country names with Code NA.
+
+Solution:
+SELECT Name
+FROM COUNTRY
+WHERE Code = 'NA';
