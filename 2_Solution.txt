@@ -1,0 +1,6 @@
+Given a table Towns, query for all the Towns which have a Population greater than 1000.
+
+Solution: 
+SELECT * 
+FROM Towns
+where Population > 1000; 
