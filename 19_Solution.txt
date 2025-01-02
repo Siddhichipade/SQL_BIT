@@ -1,0 +1,7 @@
+Given the ‘STUDENTS’ table. Write an SQL query to find the 5’th highest marks in the students table.
+
+Solution:
+SELECT DISTINCT Marks 
+FROM STUDENTS
+ORDER BY Marks DESC
+LIMIT 1 OFFSET 3;
