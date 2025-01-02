@@ -1,0 +1,11 @@
+You are given 2 tables, One containing the available Books and the other containing the Books that have been bought by a customer. You have to find the Id’s of all the ‘Famous’ Books. A book is called ‘Famous’ if it is bought by at least 3 customers.
+
+Solution:
+SELECT Books.Id 
+FROM Books
+WHERE Books.id IN 
+(
+    SELECT BooksId FROM BoughtBooks
+    GROUP BY BooksId 
+    HAVING COUNT(*) > 2
+);
