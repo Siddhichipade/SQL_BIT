@@ -1,7 +1,7 @@
 You are given one table ‘Students’ which consists of Id,Name and Birthdate of students. Write an SQL query to find for each date the number of students having their birthday on that day and their names (seperated by commas). Also the Dates should be ordered in ascending order.
 Solution:
 SELECT 
-    GROUP_CONCAT(Name ORDER BY Name SEPARATOR ',') AS Names
-FROM Students
-GROUP BY BirthDate
-ORDER BY BirthDate ASC;
+    GROUP_CONCAT(DISTINCT Name SEPARATOR ',') AS Names
+        FROM Students
+            GROUP BY BirthDate
+                ORDER BY BirthDate 
