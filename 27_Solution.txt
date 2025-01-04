@@ -1,0 +1,13 @@
+You are given 3 tables namely ‘Students’ , ‘Departments’ and ‘Jobs’.
+
+Write an SQL query to find for each student their name and the date of the job offer. The output should be sorted by Department Names. Note that there might be students who did not receive a single offer, in such cases you should not include them in the output table.
+
+Solution:
+select CONCAT(s.Name, ',' ,j.Date) as Offers
+from Students s join Departments d
+on (s.DepartmentId=d.DepartmentId)
+left join Jobs j
+on (s.Id=j.Id)
+where j.Date is not NULL
+order by d.DepartmentName
+;
