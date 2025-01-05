@@ -1,0 +1,8 @@
+Given 2 tables ENGINEER and DATA, query the sum of Count of all the engineers whose Type is FrontEnd.
+
+Note: The column ID is the same in both the tables
+
+Solution:
+SELECT SUM(ENGINEER.Count) as A 
+FROM ENGINEER 
+INNER JOIN DATA ON ENGINEER.ID = DATA.ID WHERE DATA.Type = 'FrontEnd';
