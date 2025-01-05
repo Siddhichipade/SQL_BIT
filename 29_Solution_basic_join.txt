@@ -1,0 +1,7 @@
+Given 2 tables ENGINEER and DATA, query for the total count of each Type in the ENGINEER table. Print the result in alphabetical order of the Type.
+
+Note: The ID columns in both tables are identical.
+Solution:
+SELECT SUM(ENGINEER.Count) AS A 
+FROM ENGINEER 
+INNER JOIN DATA ON ENGINEER.ID = DATA.ID GROUP BY DATA.Type ORDER BY DATA.Type;
